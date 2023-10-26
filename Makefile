@@ -2,7 +2,7 @@ UNAME_S := $(shell uname -s)
 UNAME_M := $(shell uname -m)
 GIT_SHA := $(shell git rev-parse HEAD)
 BASE := "stability-ai/sdxl@sha256:c221b2b8ef527988fb59bf24a8b97c4561f1c671f73bd389f866bfb27c061316"
-DEST := "anotherjesse/sdxl-recur"
+DEST := "anotherjesse/yolo-hello-world"
 
 ifeq ($(UNAME_M),arm64)
 	URL := "https://github.com/replicate/yolo/releases/latest/download/default.yolo_$(UNAME_S)_$(UNAME_M)"
@@ -29,4 +29,4 @@ push: yolo
 		--ast predict.py \
 		--test-api $(TEST_API) \
 		--sample-dir samples/ \
-		predict.py
+		predict.py yolo.png
