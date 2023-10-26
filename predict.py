@@ -3,8 +3,5 @@ from typing import List
 
 
 class Predictor(BasePredictor):
-    def setup(self):
-        self.prefix = "hello"
-
-    def predict(self, count: int = Input(description="How yolo are you?", default=1)) -> List[Path]:
+    def predict(self, count: int = Input(description="How yolo are you - how many images of yolo do you need???", default=1)) -> List[Path]:
         return [Path("yolo.png") for i in range(count)]
